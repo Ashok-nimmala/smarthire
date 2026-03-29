@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="result-container">
+    <h2>🌾 Recommended Crop</h2>
+    <h1>{{ prediction }}</h1>
+    <img src="{{ url_for('static', filename='images/' + prediction + '.png') }}" 
+         alt="crop image"
+         class="crop-img"
+         onerror="this.src='{{ url_for('static', filename='images/default.png') }}'">
+
+    <br><br>
+
+    <a href="/">
+        <button>Back</button>
+    </a>
+</div>
+
+</body>
+</html>
